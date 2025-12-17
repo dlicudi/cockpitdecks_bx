@@ -23,6 +23,10 @@ class EncoderLEDs(Representation):
     REPRESENTATION_NAME = "encoder-leds"
     REQUIRED_DECK_FEEDBACKS = DECK_FEEDBACK.ENCODER_LEDS
 
+    SCHEMA = {
+        "encoder-leds": {"type": "integer", "meta": {"label": "Encoding Mode"}},
+    }
+
     def __init__(self, button: "Button"):
         Representation.__init__(self, button=button)
 
